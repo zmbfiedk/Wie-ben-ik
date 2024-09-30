@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Website</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            padding-top: 70px; 
+        }
+
+        .navbar {
+            background-color: orange;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .burger {
+            display: none;
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+
+        .divider {
+            margin: 20px 0;
+        }
+
+    
+        .content-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .content-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 20px;
+        }
+
+        .content-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .topbar {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .dark-toggle {
+            background-color: orange;
+            border: none;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Dark mode */
+        body.dark-mode {
+            background-color: #222;
+            color: white;
+        }
+
+        .dark-mode .navbar {
+            background-color: #444;
+        }
+
+        .dark-mode .dark-toggle {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <h1>Arthur Website/Portfolio</h1>
+        <button class="dark-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+    </div>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <ul class="nav-links" id="nav-links">
+                <a href="#ExtraInfo">Extra Info</a>
+                <a href="#ContactInfo">Services</a>
+            </ul>
+        </div>
+        <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <hr class="divider">
+    
+    <div class="content-section">
+        <img src="CSS/images/WhatsApp Image 2024-08-14 at 12.49.15 AM (1).jpeg" alt="Arthur's Picture">
+        <h3>Hi! I’m Arthur Henriques Garcia, a 16-year-old from Brazil who’s been calling the Netherlands home for the past five years. Moving from the vibrant culture of Brazil to the charming Dutch landscape has been an exciting journey. I’m passionate about exploring new cultures and making the most of every experience life has to offer.</h3>
+    </div>
+    
+    <div class="content-section">
+        <img src="CSS/images/a.jpg" alt="Arthur's Home">
+        <h3>I live in a cozy apartment in Amsterdam West with my parents and our playful Australian Shepherd, Kira. We've called this place home for the past three years. It’s a warm, welcoming spot that fits perfectly with the lively neighborhood around us.</h3>
+    </div>
+
+    <div class="content-section">
+        <img src="CSS/images/OIP.jpg" alt="Arthur's Hobbies">
+        <h3>In my free time, I enjoy a mix of activities that keep me busy and happy. I love climbing, which gives me a thrill and a great workout. Reading lets me escape into different worlds, while gaming is a fun way to unwind. Olympic weightlifting is my way to stay strong and challenge myself physically. And when I’m in the mood for something relaxing, I dive into baking, experimenting with new recipes and enjoying the results. Each hobby adds a unique flavor to my daily life.</h3>
+    </div>
+
+    <div class="content-section">
+        <img src="CSS/images/a48dde04-518e-40a0-933a-6ae82f682d99.jpg"Arthur's Skills">
+        <h3>I’m a dedicated entrepreneur with a strong work ethic and discipline. My long-term commitment to weightlifting mirrors how I approach running my small business, showing my ability to set and achieve goals with persistence.</h3>
+    </div>
+
+    <h2>My Top 10</h2>
+    <ul>
+        <li>Mina do meu condomínio - Seu Jorge</li>
+        <li>My own summer (far away) - Deftones</li>
+        <li>After the Storm - Tyler</li>
+        <li>Misericordia - Klaf</li>
+        <li>Essa moça tá Differente - Chico Buarque</li>
+        <li>Thumper - The Jig</li>
+        <li>Deixa alagar - Grupo Revelação</li>
+        <li>Mein Herz brennt - Rammstein</li>
+        <li>All Caps - MF DOOM</li>
+        <li>Wait and Bleed - Slipknot</li>
+    </ul>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
